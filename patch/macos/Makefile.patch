@@ -1,0 +1,11 @@
+--- Makefile	2019-08-18 18:50:45.000000000 +0900
++++ Makefile	2019-08-27 23:40:53.000000000 +0900
+@@ -34,7 +34,7 @@
+ 
+ ifndef CONFIG_WIN32
+ # force 32 bit build for some utilities
+-CONFIG_M32=y
++# CONFIG_M32=y
+ endif
+ ifdef CONFIG_DARWIN
+ # use clang instead of gcc
