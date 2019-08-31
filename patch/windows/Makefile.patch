@@ -1,0 +1,19 @@
+--- Makefile	2019-08-18 18:50:45.000000000 +0900
++++ Makefile	2019-08-31 16:05:13.000000000 +0900
+@@ -217,13 +217,13 @@
+ endif # CONFIG_LTO
+ 
+ repl.c: qjsc repl.js 
+-	./qjsc -c -o $@ -m repl.js
++	wine ./qjsc -c -o $@ -m repl.js
+ 
+ repl-bn.c: qjsbnc repl.js 
+-	./qjsbnc -c -o $@ -m repl.js
++	wine ./qjsbnc -c -o $@ -m repl.js
+ 
+ qjscalc.c: qjsbnc qjscalc.js
+-	./qjsbnc -c -o $@ qjscalc.js
++	wine ./qjsbnc -c -o $@ qjscalc.js
+ 
+ ifneq ($(wildcard unicode/UnicodeData.txt),)
+ $(OBJDIR)/libunicode.o $(OBJDIR)/libunicode.m32.o $(OBJDIR)/libunicode.m32s.o $(OBJDIR)/libunicode.bn.o $(OBJDIR)/libunicode.bn.m32.o \

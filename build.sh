@@ -25,16 +25,16 @@ function build {
 }
 
 function macos {
-    # patch < $PATCHDIR/macos/Makefile.patch
     make CONFIG_M32=
 }
 
 function windows {
+    patch < $PATCHDIR/windows/Makefile.patch
     docker run --rm dockcross/windows-static-x64 > $TEMPDIR/dockcross-win
     chmod +x $TEMPDIR/dockcross-win
     $TEMPDIR/dockcross-win make CONFIG_DARWIN= CONFIG_WIN32=y CROSS_PREFIX=x86_64-w64-mingw32.static-
 }
 
-# download
-# build macos
+download
+build macos
 build windows
