@@ -1,0 +1,15 @@
+/.git
+/node_modules
+/tmp
+/bin
+/patch
+/build.sh
+
+!*.a
+!*.h
+!*.exe
+!qjs
+!qjsc
+!qjsbn
+!qjsbnc
+!qjscalc
