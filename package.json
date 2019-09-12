@@ -1,8 +1,11 @@
 {
   "name": "quickjs-static",
-  "version": "0.190810.2",
+  "version": "0.190810.3",
   "description": "prebuilt quickjs static binaries",
   "main": "index.js",
+  "bin": {
+    "qjsc": "./cli/qjsc.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
