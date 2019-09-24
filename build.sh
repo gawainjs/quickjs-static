@@ -3,11 +3,10 @@
 # assume: you running this script on macos
 
 # QUICKJS_VERSION="2019-08-18" # problem in macos
-QUICKJS_VERSION="2019-08-10"
+QUICKJS_VERSION="2019-09-18"
 QUICKJS="quickjs-$QUICKJS_VERSION"
 BASEDIR=$(pwd)/$(dirname "$0")
 BINDIR="$BASEDIR/bin"
-PATCHDIR="$BASEDIR/patch"
 
 QUICKJS_TAR_XZ="$BINDIR/$QUICKJS.tar.xz"
 
@@ -29,7 +28,6 @@ function macos {
 }
 
 function windows {
-    patch < $PATCHDIR/windows/Makefile.patch
     docker run --rm dockcross/windows-static-x64 > $BINDIR/dockcross-win
     chmod +x $BINDIR/dockcross-win
     $BINDIR/dockcross-win make CONFIG_DARWIN= CONFIG_WIN32=y CROSS_PREFIX=x86_64-w64-mingw32.static-

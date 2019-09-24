@@ -13,7 +13,7 @@ if (arch !== 'x64') {
     process.exit(1);
 }
 
-const quickjsVersion = '2019-08-10';
+const quickjsVersion = '2019-09-18';
 const quickjsDir = path.join(
     __dirname,
     'bin',

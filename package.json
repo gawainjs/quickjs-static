@@ -1,6 +1,6 @@
 {
   "name": "quickjs-static",
-  "version": "0.190810.3",
+  "version": "0.190918.0",
   "description": "prebuilt quickjs static binaries",
   "main": "index.js",
   "bin": {
