@@ -9,7 +9,7 @@ const qjscExe = (platform() === 'win32') ? 'qjsc.exe' : 'qjsc';
  * @param {readonly string[]} args 
  * @returns {Promise<{ stdout: string, stderr: string }>}
  */
-exports.default = function qjsc(args) {
+module.exports = function qjsc(args) {
     return new Promise((resolve, reject) => {
         execFile(
             join(quickjsDir, qjscExe),
