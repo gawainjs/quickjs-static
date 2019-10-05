@@ -1,6 +1,6 @@
 {
   "name": "quickjs-static",
-  "version": "0.190918.0",
+  "version": "0.190918.1",
   "description": "prebuilt quickjs static binaries",
   "main": "index.js",
   "bin": {
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/lindenbark/quickjs-static.git"
   },
-  "author": "Team Lindenbark",
+  "author": "JongChan Choi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lindenbark/quickjs-static/issues"
