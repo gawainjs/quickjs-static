@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { default: qjsc } = require('../qjsc');
+const qjsc = require('../qjsc');
 
 qjsc(process.argv.slice(2))
     .then(({ stdout, stderr }) => {
